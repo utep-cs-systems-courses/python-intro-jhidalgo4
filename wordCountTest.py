@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+#Joaquin Hidalgo - Fall 2020
 
 import sys        # command line arguments
 import re         # regular expression tools
