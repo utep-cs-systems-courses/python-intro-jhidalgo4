@@ -28,3 +28,15 @@ Note that there are two major dialects of Python.  Python 3.* is
 incompatible with 2*.  As a result, Python 2.7 remains popular.  All
 of our examples were ported to 3.* during the summer of 2018.  We (mildly)
 encourage students to use that dialect of Python.
+
+
+-----------------------------------------------------
+-----------------------------------------------------
+#Joaquin Hidalgo
+
+The amount of faults (not matching words or different multiplicities) increments the counter for everytime a word is not in each others list or has a different multiplicity.
+  If the total faults is 7, then you have a total of 7 words that have a different multiplicity in each list (OutputFile vs. KeyFile) + the amount of     disctint words that exist in either or file.
+  
+  
+  
+|CODE.py | INPUTFile.txt (the .txt file the code reads) | OUTPUTFile.txt (output from running program) | KEYFile.txt (a way to compare your output file, this is the solution key) |
