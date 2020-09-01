@@ -40,7 +40,8 @@ The amount of faults (not matching words or different multiplicities) increments
  
  
 How to Run:
-<<Terminal>>  python   CodePythonTest.py   input.txt   output.txt   keyfile.txt  
+--Terminal--  
+python   CodePythonTest.py   input.txt   output.txt   keyfile.txt  
   
 | CODE.py | INPUTFile.txt  | OUTPUTFile.txt  | KEYFile.txt  |
 
