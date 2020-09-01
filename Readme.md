@@ -39,13 +39,12 @@ The amount of faults (not matching words or different multiplicities) increments
   
  
  
-How to Run:
---Terminal--  
+How to Run in Terminal/Shell  
 python   CodePythonTest.py   input.txt   output.txt   keyfile.txt  
-  
-  
-  
-extra info.)
+.
+.
+.
+
 | CODE.py | INPUTFile.txt  | OUTPUTFile.txt  | KEYFile.txt  |
 
 Code.py      (actual python code)
