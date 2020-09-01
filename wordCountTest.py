@@ -1,10 +1,10 @@
-#! /usr/bin/env python3
-#Joaquin Hidalgo - Fall 2020
+#! /usr/bin/env python3 
+#Joaquin Hidalgo - Fall 2020 
 
-import sys        # command line arguments
-import re         # regular expression tools
-import os         # checking if file exists
-import subprocess # executing program
+import sys         # command line arguments 
+import re          # regular expression tools 
+import os          # checking if file exists 
+import subprocess  # executing program 
 
 # set input and output files
 if len(sys.argv) is not 4:
@@ -44,7 +44,9 @@ master = {}
 #dictionary to test
 test = {}
 
-# attempt to open input file
+# attempt to open input file   
+# (READ SOLUTION FILE) and insert all words w/ multiplicity to master.dict()
+# count total of words
 with open(inputFname, 'r') as inputFile:
     for line in inputFile:
         # get rid of newline characters
@@ -54,9 +56,11 @@ with open(inputFname, 'r') as inputFile:
         if len(word) != 2:
             print ("Badly formatted line, exiting. Bad line:\n %s" % line)
             exit()
-        master[word[0]] = int(word[1])
+        master[word[0] ] = int(word[1]) #insert to dict()
         words += 1
 
+# (READ OUTPUT FILE) and insert to test.dict()
+# check if file is on alphabetical order 
 with open(outputFname, 'r') as outputFile:
     lastWord = ""
     for line in outputFile:
@@ -71,24 +75,27 @@ with open(outputFname, 'r') as outputFile:
             print ("Misordered words: %s appears before %s" % (lastWord, word[0]))
             passed = False
             faults += 1
-        test[word[0]] = int(word[1])
-        lastWord = word[0]
+        # if in order then insert to test.dict() and update lastWord
+        test[word[0]] = int(word[1]) 
+        lastWord = word[0] 
         
-# see if test is missing words from master
+# see if test is missing words from master 
+# iterate thru the KEYFile and check if words in KeyFile are in the OutputFile
 for key in master:
     if key not in test:
         print ("Missing word in test file: %s" % key)
         passed = False
         faults += 1
 
-# see if test has words master doesn't have
+# see if test has words master doesn't have 
+# iterate thru the output file and see if words in their are inside the KeyFile
 for key in test:
     if key not in master:
         print ("Extra word in test file: %s" % key)
         passed = False
         faults += 1
         
-# see if counts match        
+# see if counts match
 for key in master:
     if key in test and test[key] != master[key]:
         print ("Count mismatch for %s, should be %s value is %s" % (key, master[key], test[key]))
