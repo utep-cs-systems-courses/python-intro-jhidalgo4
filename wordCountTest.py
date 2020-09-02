@@ -59,7 +59,7 @@ with open(inputFname, 'r') as inputFile:
         master[word[0] ] = int(word[1]) #insert to dict()
         words += 1
 
-# (READ OUTPUT FILE) and insert to test.dict()
+# (READ OUTPUT FILE) generated from python code and insert to test.dict()
 # check if file is on alphabetical order 
 with open(outputFname, 'r') as outputFile:
     lastWord = ""
